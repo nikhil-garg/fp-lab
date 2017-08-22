@@ -1,0 +1,24 @@
+INFO  HAL.Ctr Opening first available FPGA board
+INFO  HAL.Ctr Config successfully loaded from file /home/default-fp-user/fp-spikey/spikeyhal/config/station544.cfg
+INFO  PyN.wks Using station station544
+INFO  HAL.Spi Found Spikey 5.
+WARN  PyN.cfg Could not load excSynDrivers calibration from calibSynDriver_chip544_exc.dat
+  in path /home/default-fp-user/fp-spikey/deb-pynn/src/hardware/spikey/config/calibration
+WARN  PyN.cfg Could not load inhSynDrivers calibration from calibSynDriver_chip544_inh.dat
+  in path /home/default-fp-user/fp-spikey/deb-pynn/src/hardware/spikey/config/calibration
+INFO  PyN.cfg Calibrations NeuronMems Icb TauMem bioDynrange NOT loaded!
+INFO  HAL.PyS Hardware config written (enable loglevel 3 to list parameter names)
+WARN  PyN.cfg Biological voltages larger than -55 mV (excitatory reversal potential excluded) may not be supported by the utilized chip! (One reference voltage for hardware neuron 0 on block 0 has value -50.0)
+WARN  PyN.cfg Biological voltages larger than -55 mV (excitatory reversal potential excluded) may not be supported by the utilized chip! (One reference voltage for hardware neuron 1 on block 0 has value -50.0)
+WARN  HAL.Cal vout#37 set to 0.02 but valid range is: 0.1178 - 1.691
+WARN  HAL.Cal vout#38 set to 0.02 but valid range is: 0.1063 - 1.704
+WARN  HAL.Cal vout#12 set to 0.02 but valid range is: 0.1116 - 1.706
+WARN  HAL.Cal vout#13 set to 0.02 but valid range is: 0.127 - 1.707
+WARN  HAL.PRC Pram refresh time too long for precise Dac voltage values smaller than 50!
+INFO  HAL.PyS Hardware config written (enable loglevel 3 to list parameter names)
+INFO  PyN.syn ### Hardware run 00000000 - Tsim = 200.0 ###
+INFO  PyN.cfg Transfer data to hardware system.
+INFO  PyN.cfg Trigger network emulation.
+INFO  PyN.cfg Receive spike data.
+INFO  PyN.syn Network emulation finished.
+INFO  Default Connected to USB board.
