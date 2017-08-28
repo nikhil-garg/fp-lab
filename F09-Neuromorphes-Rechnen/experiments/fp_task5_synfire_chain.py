@@ -22,8 +22,8 @@ import pyNN.hardware.spikey as pynn
 import numpy as np
 
 runtime = 500.0 # ms
-noPops = 9 # chain length
-popSize = {'exc': 10, 'inh': 10} # size of each chain link
+noPops = 15 # chain length #9
+popSize = {'exc': 6, 'inh': 6} # size of each chain link #exc 10, inh 10
 # connection probabilities
 probExcExc = 1.0
 probExcInh = 1.0
@@ -36,17 +36,17 @@ pynn.setup()
 
 # define weights in digital hardware values
 # --> these should be tuned first to obtain synfire chain behavior!
-weightStimExcExc = 12 * pynn.minExcWeight()
-weightStimExcInh = 12 * pynn.minExcWeight()
-weightExcExc = 8 * pynn.minExcWeight()
-weightExcInh = 10 * pynn.minExcWeight()
-weightInhExc = 7 * pynn.minInhWeight()
+weightStimExcExc = 12 * pynn.minExcWeight() # 12
+weightStimExcInh = 12 * pynn.minExcWeight() # 12
+weightExcExc = 13 * pynn.minExcWeight() # 8
+weightExcInh = 14* pynn.minExcWeight() # 10
+weightInhExc = 9 * pynn.minInhWeight() # 7
 
 # kick starter input pulse(s)
-stimSpikes = np.array([100.0])
+#stimSpikes = np.array([100.0])
 
 # to have several kick starter pulses, use (don't forget to reduce to first entry for closed chain):
-#stimSpikes = np.array([100.0, 200.0, 300.0])
+stimSpikes = np.array([100.0, 200.0, 300.0])
 
 stimExc = pynn.Population(popSize['exc'], pynn.SpikeSourceArray, {'spike_times': stimSpikes})
 
@@ -66,7 +66,8 @@ pynn.Projection(stimExc, popCollector['inh'][0], pynn.FixedProbabilityConnector(
 # see figure ... in script for the illustration of the network topology
 # for closing the loop you need to change the for loop range
 # i.e. if popIndex < noPops - 1: open chain
-for popIndex in range(noPops-1):
+# 					 noPops : closed chain
+for popIndex in range(noPops):
         pynn.Projection(popCollector['exc'][popIndex], popCollector['exc'][(popIndex + 1) % noPops],
                         pynn.FixedProbabilityConnector(p_connect=probExcExc, weights=weightExcExc), target='excitatory')
         pynn.Projection(popCollector['exc'][popIndex], popCollector['inh'][(popIndex + 1) % noPops],

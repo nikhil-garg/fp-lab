@@ -28,6 +28,23 @@ from neo.core import SpikeTrain
 
 import matplotlib.pyplot as plt
 
+
+from elephant.conversion import BinnedSpikeTrain
+from elephant.spike_train_correlation import corrcoef
+from elephant.statistics import isi, cv
+
+ws = []
+
+'''
+for w in range(0, 25, 5):
+	ks = []
+	for k in range(0, 25, 5):
+'''
+
+w = 8
+k = 9
+
+
 pynn.setup()
 
 # set resting potential over spiking threshold
@@ -35,15 +52,17 @@ runtime = 1000.0 #ms
 popSize = 192
 
 # the following three parameters can be tuned for "optimal decorrelation"
-w = 16.0
+#w = 12.0
+#k = 18
+
 weight = w * pynn.minInhWeight() #default 4.0
-numInhPerNeuron = 25 #default 25
+numInhPerNeuron = k #default 25
 neuronParams = {
-    'v_reset'   : -80.0, # mV  # default
-    'e_rev_I'   : -80.0, # mV  # default
-    'v_rest'    : -35.0, # mV  # for const-current emulation set to > v_thresh #-30.0 default
-    'v_thresh'  : -55.0, # mV  # default
-    'g_leak'    :  20.0  # nS  -> tau_mem = 0.2nF / 20nS = 10ms
+	'v_reset'   : -80.0, # mV  # default
+	'e_rev_I'   : -80.0, # mV  # default
+	'v_rest'    : -35.0, # mV  # for const-current emulation set to > v_thresh #-30.0 default
+	'v_thresh'  : -55.0, # mV  # default
+	'g_leak'    :  20.0  # nS  -> tau_mem = 0.2nF / 20nS = 10ms
 }
 
 
@@ -71,27 +90,75 @@ pynn.end()
 snglnrn_spikes = []
 snglnrn_spikes_neo = []
 for i in range(popSize):
-    snglnrn_spikes.append(spikes[np.nonzero(np.equal(i, spikes[:,0])),1][0])
-    snglnrn_spikes_neo.append(SpikeTrain(times=snglnrn_spikes[i] * q.ms, t_start=0.0 * q.ms, t_stop=runtime * q.ms))
+	snglnrn_spikes.append(spikes[np.nonzero(np.equal(i, spikes[:,0])),1][0])
+	snglnrn_spikes_neo.append(SpikeTrain(times=snglnrn_spikes[i] * q.ms, t_start=0.0 * q.ms, t_stop=runtime * q.ms))
 
+'''
 # generate raster-plot
 for i, spiketrain in enumerate(snglnrn_spikes_neo):
-        t = spiketrain.rescale(q.ms)
-        plt.plot(t, i * np.ones_like(t), 'k.', markersize=2)
+		t = spiketrain.rescale(q.ms)
+		plt.plot(t, i * np.ones_like(t), 'k.', markersize=2)
 plt.axis('tight')
 plt.xlim(0, runtime)
 plt.xlabel('Time (ms)', fontsize=16)
 plt.ylabel('Spike Train Index', fontsize=16)
 plt.gca().tick_params(axis='both', which='major', labelsize=14)
 plt.savefig('decorr_rasterplot_w{}_k{}.png'.format(w, numInhPerNeuron))
+'''
 
 # calculate ISIs and coefficient of variation (CV)
-from elephant.statistics import isi, cv
+
 isi_list  = [np.nanmean(isi(spiketrain))       for spiketrain in snglnrn_spikes_neo]
 rate_list = [(np.size(spiketrain) / runtime * 1e3) for spiketrain in snglnrn_spikes]
 cv_list   = [cv(isi(spiketrain))               for spiketrain in snglnrn_spikes_neo]
 
 
+train = BinnedSpikeTrain(snglnrn_spikes_neo, binsize=5 * q.ms)
+cc_matrix = corrcoef(train, binary=False)
+
+# Matrix zwischenspeichern 
+#np.savetxt('cc_matrix.txt', cc_matrix)
+#print(np.shape(cc_matrix)) # (192, 192)
+#print(cc_matrix)
+#plt.plot(cc_matrix)
+
+# Hauptdiagonale entfernen
+for i in range(192):
+	cc_matrix[i][i] = np.nan 
+
+# Nan Werte entfernen
+cc_matrix = cc_matrix[:,~np.isnan(cc_matrix).all(0)]
+cc_matrix = cc_matrix[~np.isnan(cc_matrix).all(1)]
+
+print('w:', w)
+print('K:', numInhPerNeuron)	
+print('Mean of cc_matrix:', np.nanmean(cc_matrix))
+print('Std of cc_matrix:', np.nanstd(cc_matrix))
+
+#ks.append(np.nanmean(cc_matrix))	
+
+plt.imshow(np.log(cc_matrix))
+plt.colorbar()
+
+#plt.show()
+plt.savefig('matrix.pdf')
+
+#	ws.append(ks)
+
+#print(ws)
+
+#plt.imshow(ws)
+#plt.savefig('6-3-variieren-von-w-und-k.pdf')
+
+
+'''
+plt.imshow(np.log(cc_matrix))
+plt.colorbar()
+plt.savefig('matrix2.pdf')
+
+'''
+
+'''
 # rate against cv
 plt.clf()
 plt.scatter(cv_list, rate_list)
@@ -126,3 +193,4 @@ print('std of av rate:', np.std(rate_list))
 print('Mean of cv list:', np.nanmean(cv_list))
 print('std of cv list:', np.nanstd(cv_list))
 #print(cv_list)
+'''

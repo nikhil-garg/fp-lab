@@ -6,19 +6,35 @@ WARN  PyN.cfg Could not load excSynDrivers calibration from calibSynDriver_chip5
   in path /home/default-fp-user/fp-spikey/deb-pynn/src/hardware/spikey/config/calibration
 WARN  PyN.cfg Could not load inhSynDrivers calibration from calibSynDriver_chip544_inh.dat
   in path /home/default-fp-user/fp-spikey/deb-pynn/src/hardware/spikey/config/calibration
-INFO  PyN.cfg Calibrations NeuronMems Icb TauMem bioDynrange NOT loaded!
+INFO  PyN.cfg Calibrations NeuronMems Icb bioDynrange NOT loaded!
 INFO  HAL.PyS Hardware config written (enable loglevel 3 to list parameter names)
-WARN  PyN.cfg Biological voltages larger than -55 mV (excitatory reversal potential excluded) may not be supported by the utilized chip! (One reference voltage for hardware neuron 0 on block 0 has value -50.0)
-WARN  PyN.cfg Biological voltages larger than -55 mV (excitatory reversal potential excluded) may not be supported by the utilized chip! (One reference voltage for hardware neuron 1 on block 0 has value -50.0)
+WARN  PyN.cfg Biological voltages larger than -55 mV (excitatory reversal potential excluded) may not be supported by the utilized chip! (One reference voltage for hardware neuron 0 on block 0 has value -35.0)
+WARN  PyN.cfg Biological voltages larger than -55 mV (excitatory reversal potential excluded) may not be supported by the utilized chip! (One reference voltage for hardware neuron 1 on block 0 has value -35.0)
+WARN  PyN.cfg Membrane time constant is outside calibrated range for neurons [59, 71, 130]
+WARN  PyN.cfg Bad calibration of membrane time constant for neurons [50, 186]; blacklist if necessary
+INFO  PyN.cfg Muxing voltage 0 to test pin.
+WARN  vmodule.Vmux_board set mux in mode 3, in=8, mux_adr=3
+INFO  PyN.cfg Monitoring hardware neuron 0 (on membrane readout pin 0)
+INFO  PyN.cfg Muxing voltage 0 to test pin.
+WARN  vmodule.Vmux_board set mux in mode 3, in=8, mux_adr=3
+INFO  PyN.cfg Monitoring hardware neuron 1 (on membrane readout pin 1)
+INFO  PyN.cfg Muxing voltage 0 to test pin.
+WARN  vmodule.Vmux_board set mux in mode 3, in=8, mux_adr=3
+INFO  PyN.cfg Monitoring hardware neuron 2 (on membrane readout pin 2)
+INFO  PyN.cfg Muxing voltage 0 to test pin.
+WARN  vmodule.Vmux_board set mux in mode 3, in=8, mux_adr=3
+INFO  PyN.cfg Monitoring hardware neuron 3 (on membrane readout pin 3)
 WARN  HAL.Cal vout#37 set to 0.02 but valid range is: 0.1178 - 1.691
 WARN  HAL.Cal vout#38 set to 0.02 but valid range is: 0.1063 - 1.704
 WARN  HAL.Cal vout#12 set to 0.02 but valid range is: 0.1116 - 1.706
 WARN  HAL.Cal vout#13 set to 0.02 but valid range is: 0.127 - 1.707
 WARN  HAL.PRC Pram refresh time too long for precise Dac voltage values smaller than 50!
 INFO  HAL.PyS Hardware config written (enable loglevel 3 to list parameter names)
-INFO  PyN.syn ### Hardware run 00000000 - Tsim = 200.0 ###
+INFO  PyN.syn ### Hardware run 00000000 - Tsim = 1000.0 ###
+INFO  Default Connected to USB board.
 INFO  PyN.cfg Transfer data to hardware system.
 INFO  PyN.cfg Trigger network emulation.
 INFO  PyN.cfg Receive spike data.
+INFO  PyN.syn Receive membrane data.
+INFO  PyN.syn Transforming membrane data.
 INFO  PyN.syn Network emulation finished.
-INFO  Default Connected to USB board.

@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 '''
 Fortgesschrittenenpraktikum F09/10 - Neuromorphic Computing
@@ -15,19 +16,32 @@ import matplotlib.pyplot as plt
 weight             = 15.0        # synaptic weight in digital values
 runtime            = 1000 * 1000.0 # runtime in biological time domain in ms
 durationInterval   = 200.0       # interval between input spikes in ms
-neuronIndex        = 42          # choose neuron on chip in range(384)
-synapseDriverIndex = 42          # choose synapse driver in range(256)
+neuronIndex        = 42          # choose neuron on chip in range(384) default 42
+synapseDriverIndex = 42          # choose synapse driver in range(256) default 42
+#n = 0
+drvifallFactors = 0.2
+drvioutFactors = 0.7
+
+#for i in range(2, 250, 60):
+#	for j in range(2, 166, 5):	
+#		drvifallFactors = i/100.0
+#		drvioutFactors = j/100.0
+#		n += 1
+#		x = '0' * (5 -len(str(n))) + str(n)
 
 pynn.setup(mappingOffset=neuronIndex, calibSynDrivers=False) #turn off calibration of synapse line drivers
 
 ##build network
 neurons = pynn.Population(1, pynn.IF_facets_hardware1)
+neurons.set({'v_thresh' : 20.0})
+
 pynn.record_v(neurons[0], '')
+print(synapseDriverIndex)
 
 #allocate dummy synapse drivers sending no spikes
 if synapseDriverIndex > 0:
-    stimuliDummy = pynn.Population(synapseDriverIndex, pynn.SpikeSourceArray, {'spike_times': []})
-    prj = pynn.Projection(stimuliDummy, neurons, pynn.AllToAllConnector(weights=0), target='inhibitory')
+	stimuliDummy = pynn.Population(synapseDriverIndex, pynn.SpikeSourceArray, {'spike_times': []})
+	prj = pynn.Projection(stimuliDummy, neurons, pynn.AllToAllConnector(weights=0), target='inhibitory')
 
 #allocate synapse driver and configure spike times
 stimProp = {'spike_times': np.arange(durationInterval, runtime - durationInterval, durationInterval)}
@@ -38,8 +52,8 @@ prj = pynn.Projection(stimuli, neurons, pynn.AllToAllConnector(weights=weight * 
 # drvifall controls the slope of the falling edge of the PSP shape.
 # smaller values increase the length, thus the total charge transmitted by the synapse, thus the PSP height.
 print 'Range of calibration factors of drvifall for excitatory connections', prj.getDrvifallFactorsRange('inh')
-prj.setDrvifallFactors([0.2])
-#prj.setDrvioutFactors([1.0])
+prj.setDrvifallFactors([drvifallFactors])
+prj.setDrvioutFactors([drvioutFactors])
 
 ##run network
 pynn.run(runtime)
@@ -66,7 +80,12 @@ memAverage = np.mean(memInterval[1:-1], axis=0)
 plt.figure()
 plt.plot(timeNorm[:lenInterval], memInterval[1], 'b')
 plt.plot(timeNorm[:lenInterval], memAverage, 'r')
-plt.legend(['single EPSP', 'average across {} EPSPs'.format(numInterval)])
+plt.legend(['single IPSP', 'average across {} EPSPs'.format(numInterval)], loc='best')
 plt.xlabel('time (ms)')
+#plt.ylim((-75, -30))
+plt.title('IPSPs with factors fall={} and out={}'.format(drvifallFactors, drvioutFactors))
 plt.ylabel('membrane voltage (mV)')
-plt.savefig('epsp.png')
+plt.savefig('ipsp_fall{}_out{}.png'.format(drvifallFactors, drvioutFactors))
+#plt.savefig('{}.png'.format(x))
+
+

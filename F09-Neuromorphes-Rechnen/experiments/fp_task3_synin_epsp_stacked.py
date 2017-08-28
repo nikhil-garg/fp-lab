@@ -20,7 +20,7 @@ def moving_average(a, n=3) :
 # you can play around with these parameters and the weight to find a "nice" synapse
 col = 42
 minrow = 42
-weight = 10.0
+weight = 2.0
 
 runtime = 400.0
 	
@@ -32,7 +32,7 @@ neuronParams = {
     'v_reset'   : -80.0, # mV 
     'e_rev_I'   : -80.0, # mV
     'v_rest'    : -75.0, # mV
-    'v_thresh'  : -55.0, # mV
+    'v_thresh'  : 55.0, # mV #-55
     'g_leak'    :  20.0  # nS  -> tau_mem = 0.2nF / 20nS = 10ms
 }
 # the target neuron:
@@ -45,7 +45,7 @@ print pynn.IF_facets_hardware1.default_parameters
 
 synarray = []
 # spike times for input stimulus
-spiketimes = np.arange(100.0, 151.0, 10.0)
+spiketimes = np.arange(100.0, 150.0, 5)
 stimarray = [{'spike_times' : [time]} for time in spiketimes]
 prjarray = []
 
