@@ -3,6 +3,6 @@ This is my working directory for the Advanced Physics Lab ([Fortgeschrittenen-Pr
 
 I chose to do the following experiments: 
 - [x] E01: Electronics (Elektronik Grundpraktikum)
-- [ ] F09: Neuromorphic Computing (Neuromorphes Rechnen)
+- [x] F09: Neuromorphic Computing (Neuromorphes Rechnen)
 - [ ] F44: Zeeman Spectroscopy (Zeemanspektroskopie)
 
