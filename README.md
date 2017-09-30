@@ -5,4 +5,4 @@ I chose to do the following experiments:
 - [x] E01: Electronics (Elektronik Grundpraktikum)
 - [x] F09: Neuromorphic Computing (Neuromorphes Rechnen)
 - [ ] F44: Zeeman Spectroscopy (Zeemanspektroskopie)
-
+- [ ] F70: Mechanics and Vacuum (Mechanik und Vakuum)
