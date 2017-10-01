@@ -6,3 +6,4 @@ I chose to do the following experiments:
 - [x] F09: Neuromorphic Computing (Neuromorphes Rechnen)
 - [ ] F44: Zeeman Spectroscopy (Zeemanspektroskopie)
 - [ ] F70: Mechanics and Vacuum (Mechanik und Vakuum)
+- [ ] F18: Stratospheric trace elements (Stratosphärische Spurenstoffe)
