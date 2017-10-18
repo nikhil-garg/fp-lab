@@ -7,4 +7,3 @@ I chose to do the following experiments:
 - [ ] F44: Zeeman Spectroscopy (Zeemanspektroskopie)
 - [ ] F70: Mechanics and Vacuum (Mechanik und Vakuum)
 - [ ] F18: Atmospheric trace gases (Atmosphärische Spurenstoffe)
-- [ ]
