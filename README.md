@@ -4,6 +4,6 @@ This is my working directory for the Advanced Physics Lab ([Fortgeschrittenen-Pr
 I chose to do the following experiments: 
 - [x] E01: Electronics (Elektronik Grundpraktikum)
 - [x] F09: Neuromorphic Computing (Neuromorphes Rechnen)
-- [ ] F44: Zeeman Spectroscopy (Zeemanspektroskopie)
+- [x] F44: Zeeman Spectroscopy (Zeemanspektroskopie)
 - [ ] F70: Mechanics and Vacuum (Mechanik und Vakuum)
-- [ ] F18: Atmospheric trace gases (Atmosphärische Spurenstoffe)
+- [ ] F69: Laue Spectroscopy (Röntgendiffraktometrie)
