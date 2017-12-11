@@ -14,5 +14,5 @@ for tab in tabellen:
     c1, c2 = np.loadtxt(tab, unpack=True, skiprows=1)
     plt.plot(c1, c2)
     plt.title(tab)
-    plt.savefig(tab[:-3] + '.pdf')
+    plt.savefig(tab[:-4] + '.pdf')
     plt.show()
