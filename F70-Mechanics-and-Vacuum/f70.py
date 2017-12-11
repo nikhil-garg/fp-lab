@@ -11,7 +11,9 @@ import matplotlib.pyplot as plt
 
 p, dp, t, dt, V, dV = np.loadtxt('tab1.txt', unpack=True, skiprows=1)
 plt.plot(p, V/t)
-plt.title(tab1.txt)
+plt.title('tab1.txt')
+plt.xlabel('p')
+plt.ylabel('V/t')
 plt.savefig('tab1.pdf')
 plt.show()
 
@@ -19,6 +21,8 @@ tabellen = ['tab2.txt', 'tab3.txt', 'tab4.txt']
 for tab in tabellen:
     c1, c2 = np.loadtxt(tab, unpack=True, skiprows=1)
     plt.plot(c1, c2)
+    plt.xlabel('c1')
+    plt.ylabel('c2')
     plt.title(tab)
     plt.savefig(tab[:-4] + '.pdf')
     plt.show()
