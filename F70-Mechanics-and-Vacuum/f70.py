@@ -2,7 +2,7 @@
 Mechanics and Vacuum
 
 Fortgeschrittenen Praktikum Uni Heidelberg
-F70: Mechanik und Vakuuum 
+F70: Mechanik und Vakuum 
 '''
 
 import numpy as np
