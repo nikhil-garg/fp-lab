@@ -1,0 +1,62 @@
+<!DOCTYPE ClipWorkspace>
+<ClipWorkspace>
+  <CrystalConnection>
+    <ConnectedCrystal>
+      <CrystalDisplay>
+        <Geometry width="381" x="2146" y="766" height="412"/>
+        <Crystal>
+          <Spacegroup symbol="152"/>
+          <Cell beta="90.00000000000001" gamma="120" alpha="90.00000000000001" a="4.9134" b="4.9134" c="5.405200000000001"/>
+          <Orientation phi="4.912957318857731" omega="146.7460130470856" chi="-178.5734748924103"/>
+          <RotationAxis x="1" y="0" z="0" type="0"/>
+        </Crystal>
+      </CrystalDisplay>
+    </ConnectedCrystal>
+    <ConnectedProjectors>
+      <ProjectionPlane projectortype="LauePlaneProjector">
+        <Geometry width="1869" x="23" y="0" height="1321"/>
+        <ZoomSteps/>
+        <Projector>
+          <QRange Qmax="6.883" Qmin="0"/>
+          <Display textSize="10" spotSize="0.2" spotsEnabled="1" maxHKLSum="3"/>
+          <Image Filename="C:/Users/PSL Camera/Desktop/StellaOskar/Teil 2/05-quartz.jpg">
+            <Scaler>
+              <Transform m31="0" m21="0" m32="640" m11="980" m22="-640" m33="1" m12="0" m23="0" m13="0"/>
+            </Scaler>
+            <Transfercurves>
+              <Value>
+                <Point x="0" y="0"/>
+                <Point x="1" y="1"/>
+              </Value>
+              <Red>
+                <Point x="0" y="0"/>
+                <Point x="1" y="1"/>
+              </Red>
+              <Green>
+                <Point x="0" y="0"/>
+                <Point x="1" y="1"/>
+              </Green>
+              <Blue>
+                <Point x="0" y="0"/>
+                <Point x="1" y="1"/>
+              </Blue>
+            </Transfercurves>
+          </Image>
+          <DetSize width="166.6" dist="27.9" height="108.8"/>
+          <DetOrientation Chi="-1" Phi="0" Omega="180.43"/>
+          <DetOffset xOffset="-0.02" yOffset="0.29"/>
+        </Projector>
+      </ProjectionPlane>
+      <ProjectionPlane projectortype="StereoProjector">
+        <Geometry width="379" x="2147" y="0" height="499"/>
+        <ZoomSteps/>
+        <Projector>
+          <QRange Qmax="5.242" Qmin="0"/>
+          <Display textSize="10" spotSize="1" spotsEnabled="1" maxHKLSum="3"/>
+          <Frame M20="0" M10="0" M21="0" M00="1" M11="1" M22="1" M01="0" M12="0" M02="0"/>
+          <DisplayNonScattering value="1"/>
+        </Projector>
+      </ProjectionPlane>
+    </ConnectedProjectors>
+  </CrystalConnection>
+</ClipWorkspace>
