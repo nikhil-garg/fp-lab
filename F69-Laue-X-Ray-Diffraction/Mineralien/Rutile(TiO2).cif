@@ -1,0 +1,95 @@
+##############################################################################
+###               Entry exported from Match! User Database                 ###
+##############################################################################
+###                           Data published by:                           ###
+###                                                                        ###
+###               COD (Crystallography Open Database)
+##############################################################################
+data_9009083
+_citation_journal_full    'Crystal Structures'
+_citation_journal_volume  '1'
+_citation_page_first  '239'
+_citation_page_last   '444'
+_citation_year  '1963'
+_citation_title  'Second edition. Interscience Publishers, New York, New York'
+loop_
+_publ_author_name
+  'Wyckoff R. W. G.'
+_chemical_formula_sum  'O2 Ti'
+_chemical_name_mineral  'Rutile'
+_symmetry_space_group_name_H-M 'P 42/m n m'
+_space_group_IT_number 136
+_space_group_crystal_system 'tetragonal'
+loop_
+_symmetry_equiv_pos_as_xyz
+   'x, y, z'
+   '0.5-y, 0.5+x, 0.5+z'
+   '-x, -y, z'
+   '0.5+y, 0.5-x, 0.5+z'
+   '0.5+x, 0.5-y, 0.5-z'
+   '0.5-x, 0.5+y, 0.5-z'
+   'y, x, -z'
+   '-y, -x, -z'
+   '-x, -y, -z'
+   '0.5+y, 0.5-x, 0.5-z'
+   'x, y, -z'
+   '0.5-y, 0.5+x, 0.5-z'
+   '0.5-x, 0.5+y, 0.5+z'
+   '0.5+x, 0.5-y, 0.5+z'
+   '-y, -x, z'
+   'y, x, z'
+_cell_length_a        4.5937
+_cell_length_b        4.5937
+_cell_length_c        2.9581
+_cell_angle_alpha    90.000
+_cell_angle_beta     90.000
+_cell_angle_gamma    90.000
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_B_iso_or_equiv
+ti  Ti4+    0.000   0.000   0.000    1.00000    1.000
+o  O2-    0.305   0.305   0.000    1.00000    1.000
+_cell_measurement_wavelength    1.540598
+_cell_measurement_radiation   'x-rays'
+_exptl_crystal_density_diffrn    4.250000
+loop_
+_pd_peak_d_spacing
+_pd_peak_calc_intensity_net
+     3.248258       1000.00
+     2.487073        442.02
+     2.296865         65.62
+     2.187102        178.75
+     2.054379         64.24
+     1.687370        514.96
+     1.624129        151.42
+     1.479060         70.05
+     1.452665         70.07
+     1.423664          5.37
+     1.359856        172.29
+     1.346084         83.92
+     1.303924          9.18
+     1.274071          1.89
+     1.243536         17.43
+     1.200334          9.80
+     1.170151         33.79
+     1.148432         22.92
+     1.114143          8.20
+     1.093551         54.80
+     1.082753         29.86
+     1.042642         51.42
+     1.036395         38.76
+     1.027189         22.70
+     1.016781          0.44
+##############################################################################
+###                            Comments                                    ###
+##############################################################################
+###   Diffraction pattern calculated by Match!. 
+###   I/Icor calculated by Match!. 
+##############################################################################
+
+

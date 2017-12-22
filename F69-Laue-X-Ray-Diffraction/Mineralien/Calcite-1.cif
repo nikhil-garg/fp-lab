@@ -1,0 +1,137 @@
+##############################################################################
+###               Entry exported from Match! User Database                 ###
+##############################################################################
+###                           Data published by:                           ###
+###                                                                        ###
+###               COD (Crystallography Open Database)
+##############################################################################
+data_9007689
+_citation_journal_full    'Acta Crystallographica, Section B'
+_citation_journal_volume  '51'
+_citation_page_first  '929'
+_citation_page_last   '939'
+_citation_year  '1995'
+_citation_title  'Electron density and optical anisotropy in rhombohedral carbonates. III. Synchrotron X-ray studies of CaCO3, MgCO3 and MnCO3'
+loop_
+_publ_author_name
+  'Maslen E. N.'
+  'Streltsov V. A.'
+  'Streltsova N. R.'
+  'Ishizawa N.'
+_chemical_formula_sum  'C Ca O3'
+_chemical_name_mineral  'Calcite'
+_symmetry_space_group_name_H-M 'R -3 c'
+_space_group_IT_number 167
+_space_group_crystal_system 'Ishizawa N.'
+loop_
+_symmetry_equiv_pos_as_xyz
+   'x, y, z'
+   '0.66667+x, 0.33333+y, 0.33333+z'
+   '0.33333+x, 0.66667+y, 0.66667+z'
+   '-y, x-y, z'
+   '0.66667-y, 0.33333+x-y, 0.33333+z'
+   '0.33333-y, 0.66667+x-y, 0.66667+z'
+   '-x+y, -x, z'
+   '0.66667-x+y, 0.33333-x, 0.33333+z'
+   '0.33333-x+y, 0.66667-x, 0.66667+z'
+   'x-y, -y, 0.5-z'
+   '0.66667+x-y, 0.33333-y, 0.83333-z'
+   '0.33333+x-y, 0.66667-y, 0.16667-z'
+   '-x, -x+y, 0.5-z'
+   '0.66667-x, 0.33333-x+y, 0.83333-z'
+   '0.33333-x, 0.66667-x+y, 0.16667-z'
+   'y, x, 0.5-z'
+   '0.66667+y, 0.33333+x, 0.83333-z'
+   '0.33333+y, 0.66667+x, 0.16667-z'
+   '-x, -y, -z'
+   '0.66667-x, 0.33333-y, 0.33333-z'
+   '0.33333-x, 0.66667-y, 0.66667-z'
+   'y, -x+y, -z'
+   '0.66667+y, 0.33333-x+y, 0.33333-z'
+   '0.33333+y, 0.66667-x+y, 0.66667-z'
+   'x-y, x, -z'
+   '0.66667+x-y, 0.33333+x, 0.33333-z'
+   '0.33333+x-y, 0.66667+x, 0.66667-z'
+   '-x+y, y, 0.5+z'
+   '0.66667-x+y, 0.33333+y, 0.83333+z'
+   '0.33333-x+y, 0.66667+y, 0.16667+z'
+   'x, x-y, 0.5+z'
+   '0.66667+x, 0.33333+x-y, 0.83333+z'
+   '0.33333+x, 0.66667+x-y, 0.16667+z'
+   '-y, -x, 0.5+z'
+   '0.66667-y, 0.33333-x, 0.83333+z'
+   '0.33333-y, 0.66667-x, 0.16667+z'
+_cell_length_a        4.9880
+_cell_length_b        4.9880
+_cell_length_c       17.0680
+_cell_angle_alpha    90.000
+_cell_angle_beta     90.000
+_cell_angle_gamma   120.000
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_B_iso_or_equiv
+ca  Ca    0.000   0.000   0.000    1.00000    1.000
+c   C   0.000   0.000   0.250    1.00000    1.000
+o   O2-   0.257   0.000   0.250    1.00000    1.000
+_cell_measurement_wavelength    1.540598
+_cell_measurement_radiation   'x-rays'
+_exptl_crystal_density_diffrn    2.712000
+loop_
+_pd_peak_d_spacing
+_pd_peak_calc_intensity_net
+     3.854115         82.26
+     3.035697       1000.00
+     2.844667         22.64
+     2.494000        138.59
+     2.284171        197.81
+     2.093848        148.11
+     1.927057         62.28
+     1.912908        198.48
+     1.875319        208.69
+     1.625287         37.44
+     1.603622         99.27
+     1.587383          8.91
+     1.524888         53.73
+     1.517849         24.74
+     1.509584         31.30
+     1.472901         23.02
+     1.439912         68.36
+     1.422333         39.43
+     1.356646         15.16
+     1.339143         23.67
+     1.296599         27.76
+     1.284705          5.09
+     1.247000         11.12
+     1.235530         20.33
+     1.218084          0.30
+     1.195138          0.06
+     1.186444          5.13
+     1.179822         26.06
+     1.173310          3.01
+     1.153474         48.14
+     1.142085         24.16
+     1.130474          0.05
+     1.124741          6.06
+     1.075284          0.04
+     1.071389          0.04
+     1.061688          9.23
+     1.046924         31.95
+     1.044638         34.25
+     1.041932          0.15
+     1.035639         15.72
+     1.035213          5.24
+     1.023152          4.19
+     1.011899         33.84
+##############################################################################
+###                            Comments                                    ###
+##############################################################################
+###   Diffraction pattern calculated by Match!. 
+###   I/Icor calculated by Match!. 
+##############################################################################
+
+
