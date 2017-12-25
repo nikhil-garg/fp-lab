@@ -1,0 +1,81 @@
+<!DOCTYPE ClipWorkspace>
+<ClipWorkspace>
+  <CrystalConnection>
+    <ConnectedCrystal>
+      <CrystalDisplay>
+        <Geometry width="266" x="1988" y="99" height="309"/>
+        <Crystal>
+          <Spacegroup symbol="225"/>
+          <Cell beta="90.00000000000001" gamma="90.00000000000001" alpha="90.00000000000001" a="5.6402" b="5.6402" c="5.6402"/>
+          <Orientation phi="-62.94452003129007" omega="-0.1841612049368636" chi="-2.321173422594664"/>
+          <RotationAxis x="1" y="0" z="0" type="0"/>
+        </Crystal>
+      </CrystalDisplay>
+    </ConnectedCrystal>
+    <ConnectedProjectors>
+      <ProjectionPlane projectortype="LauePlaneProjector">
+        <Geometry width="1975" x="0" y="0" height="1337"/>
+        <ZoomSteps/>
+        <Projector>
+          <QRange Qmax="6.583" Qmin="0"/>
+          <Display textSize="10" spotSize="0.2" spotsEnabled="1" maxHKLSum="3"/>
+          <SpotMarkers>
+            <Marker x="0.4503520706528225" y="0.6871345029239766"/>
+            <Marker x="0.641942156979751" y="0.4463937621832358"/>
+            <Marker x="0.7501491824800096" y="0.6968810916179338"/>
+            <Marker x="0.3841548315232526" y="0.5730994152046783"/>
+            <Marker x="0.06462585034013599" y="0.5126705653021443"/>
+            <Marker x="0.2676731511317977" y="0.5087719298245614"/>
+            <Marker x="0.4064327485380117" y="0.4239766081871345"/>
+            <Marker x="0.4363488085292597" y="0.4483430799220273"/>
+            <Marker x="0.4739030114969965" y="0.3187134502923977"/>
+            <Marker x="0.3656959859967379" y="0.2037037037037037"/>
+            <Marker x="0.5712893344472292" y="0.3362573099415205"/>
+            <Marker x="0.552193977006007" y="0.3849902534113061"/>
+            <Marker x="0.4560806778851891" y="0.2290448343079922"/>
+            <Marker x="0.5579225842383737" y="0.7251461988304093"/>
+            <Marker x="0.4707204519234595" y="0.6364522417153996"/>
+            <Marker x="0.6349405259179696" y="0.6081871345029239"/>
+            <Marker x="0.5961132991208179" y="0.5779727095516569"/>
+            <Marker x="0.5763814297648884" y="0.5584795321637427"/>
+            <Marker x="0.5865656204002069" y="0.8460038986354777"/>
+            <Marker x="0.4108883319409635" y="0.8313840155945419"/>
+            <Marker x="0.1696503162668576" y="0.5214424951267056"/>
+            <Marker x="0.7978875760830648" y="1.089668615984405"/>
+            <Marker x="0.4408043919322115" y="0.7904483430799221"/>
+            <Marker x="0.9926602219835303" y="0.6052631578947368"/>
+            <Marker x="0.8214385169272388" y="0.6354775828460039"/>
+            <Marker x="0.9506504356128416" y="0.5009746588693957"/>
+            <Marker x="0.2504224619784219" y="1.015127388535032"/>
+          </SpotMarkers>
+          <Image Filename="C:/Users/PSL Camera/Desktop/StellaOskar/Salz-Stella-1.jpg">
+            <Scaler>
+              <Transform m31="0" m21="0" m32="640" m11="980" m22="-640" m33="1" m12="0" m23="0" m13="0"/>
+            </Scaler>
+            <Transfercurves>
+              <Value>
+                <Point x="0" y="0"/>
+                <Point x="1" y="1"/>
+              </Value>
+              <Red>
+                <Point x="0" y="0"/>
+                <Point x="1" y="1"/>
+              </Red>
+              <Green>
+                <Point x="0" y="0"/>
+                <Point x="1" y="1"/>
+              </Green>
+              <Blue>
+                <Point x="0" y="0"/>
+                <Point x="1" y="1"/>
+              </Blue>
+            </Transfercurves>
+          </Image>
+          <DetSize width="166.6" dist="28.7" height="108.8"/>
+          <DetOrientation Chi="-1" Phi="0" Omega="181.2"/>
+          <DetOffset xOffset="-0.51" yOffset="-0.57"/>
+        </Projector>
+      </ProjectionPlane>
+    </ConnectedProjectors>
+  </CrystalConnection>
+</ClipWorkspace>

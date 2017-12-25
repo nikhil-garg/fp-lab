@@ -1,0 +1,69 @@
+<!DOCTYPE ClipWorkspace>
+<ClipWorkspace>
+  <CrystalConnection>
+    <ConnectedCrystal>
+      <CrystalDisplay>
+        <Geometry width="214" x="0" y="0" height="277"/>
+        <Crystal>
+          <Spacegroup symbol="225"/>
+          <Cell beta="90.00000000000001" gamma="90.00000000000001" alpha="90.00000000000001" a="5.6402" b="5.6402" c="5.6402"/>
+          <Orientation phi="30.3737701564677" omega="-176.7390708864195" chi="179.2527764719953"/>
+          <RotationAxis x="1" y="0" z="0" type="0"/>
+        </Crystal>
+      </CrystalDisplay>
+    </ConnectedCrystal>
+    <ConnectedProjectors>
+      <ProjectionPlane projectortype="LauePlaneProjector">
+        <Geometry width="1809" x="339" y="0" height="1269"/>
+        <ZoomSteps/>
+        <Projector>
+          <QRange Qmax="6.683" Qmin="0"/>
+          <Display textSize="10" spotSize="0.2" spotsEnabled="1" maxHKLSum="3"/>
+          <SpotMarkers>
+            <Marker x="0.4726981093440721" y="0.7809364548494984"/>
+            <Marker x="0.4858030168589175" y="0.6847826086956522"/>
+            <Marker x="0.5562418947512116" y="0.2525083612040133"/>
+            <Marker x="0.4519486724455669" y="0.3035117056856187"/>
+            <Marker x="0.3869701726844584" y="0.4255852842809365"/>
+            <Marker x="0.3296362023070098" y="0.4046822742474916"/>
+            <Marker x="0.644700020476418" y="0.3653846153846154"/>
+            <Marker x="0.7566377721657225" y="0.5635451505016722"/>
+            <Marker x="0.6703637976929903" y="0.5351170568561873"/>
+            <Marker x="0.5879120879120879" y="0.657190635451505"/>
+            <Marker x="0.340556958569381" y="0.6387959866220736"/>
+            <Marker x="0.009777058164155026" y="1.050130775937228"/>
+            <Marker x="0.5711424031104417" y="0.7030548068283917"/>
+            <Marker x="0.4960160254258152" y="0.6563342318059299"/>
+            <Marker x="0.4151982554923534" y="0.7911051212938006"/>
+          </SpotMarkers>
+          <Image Filename="C:/Users/PSL Camera/Desktop/StellaOskar/Salzkristall Stella/Salz-Stella-3.jpg">
+            <Scaler>
+              <Transform m31="0" m21="0" m32="640" m11="980" m22="-640" m33="1" m12="0" m23="0" m13="0"/>
+            </Scaler>
+            <Transfercurves>
+              <Value>
+                <Point x="0" y="0"/>
+                <Point x="1" y="1"/>
+              </Value>
+              <Red>
+                <Point x="0" y="0"/>
+                <Point x="1" y="1"/>
+              </Red>
+              <Green>
+                <Point x="0" y="0"/>
+                <Point x="1" y="1"/>
+              </Green>
+              <Blue>
+                <Point x="0" y="0"/>
+                <Point x="1" y="1"/>
+              </Blue>
+            </Transfercurves>
+          </Image>
+          <DetSize width="168.6" dist="29.5" height="106.8"/>
+          <DetOrientation Chi="3" Phi="0" Omega="182.2"/>
+          <DetOffset xOffset="-1.29" yOffset="0.2441379310344828"/>
+        </Projector>
+      </ProjectionPlane>
+    </ConnectedProjectors>
+  </CrystalConnection>
+</ClipWorkspace>
