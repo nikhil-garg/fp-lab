@@ -6,4 +6,4 @@ I chose to do the following experiments:
 - [x] F09: Neuromorphic Computing (Neuromorphes Rechnen)
 - [x] F44: Zeeman Spectroscopy (Zeemanspektroskopie)
 - [ ] F70: Mechanics and Vacuum (Mechanik und Vakuum)
-- [ ] F69: Laue Spectroscopy (Röntgendiffraktometrie)
+- [ ] F69: Laue X-Ray Diffraction (Röntgendiffraktometrie)
