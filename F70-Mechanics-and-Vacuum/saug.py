@@ -21,7 +21,7 @@ def dS(V, dV, t, dt):
 
 p, dp, t, dt, V, dV = np.loadtxt('tab1.txt', unpack=True, skiprows=1)
 
-V = V * 0.001 #von milli Liter nach Liter umrechnen
+V = V * 0.001 #von MilliLiter nach Liter umrechnen
 dV = dV * 0.001
 p = p *0.001
 dp = dp *0.001
