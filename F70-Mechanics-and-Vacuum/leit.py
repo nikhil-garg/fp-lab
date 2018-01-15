@@ -53,23 +53,37 @@ u4 = u4 * 0.001
 o2 = o2 * 0.001
 o3 = o3 * 0.001
 o4 = o4 * 0.001
+print()
+print('Rohr: Werte 1-3 gemittelt: ')
+print(np.mean(L(S, u2, o2-u2)[0:3]), '+-', np.mean((dL(S, dS, u2, dp(u2), o2-u2, ddelta_p(o2, u2)))[0:3]), 'std', np.std((dL(S, dS, u2, dp(u2), o2-u2, ddelta_p(o2, u2)))[0:3]))
+print()
+print('Rohr letzter Wert:')
+print((L(S, u2, o2-u2)[-1]), '+-', dL(S, dS, u2, dp(u2), o2-u2, ddelta_p(o2, u2))[-1])
+print()
+print('Blende: 1-7 gemittelt:')
+print(np.mean(L(S, u3, o3-u3)[0:7]), '+-', np.mean(dL(S, dS, u2, dp(u2), o2-u2, ddelta_p(o2, u2))[0:7]), 'std', np.std(dL(S, dS, u2, dp(u2), o2-u2, ddelta_p(o2, u2))[0:7]))
+print()
+print('Rohr und Blende: Werte 1-4 gemittelt:')
+print(np.mean(L(S, u4, o4-u4)[0:4]), '+-', np.mean(dL(S, dS, u4, dp(u4), o4-u4, ddelta_p(o4, u4))[0:4]), 'std', np.std(dL(S, dS, u4, dp(u4), o4-u4, ddelta_p(o4, u4))[0:4]))
+print()
+print('Rohr und Blende letzter Wert:')
+print(L(S, u4, o4-u4)[-1], '+-', dL(S, dS, u4, dp(u4), o4-u4, ddelta_p(o4, u4))[-1])
 
 plt.errorbar(u2, L(S, u2, o2-u2), xerr=dp(u2), yerr=dL(S, dS, u2, dp(u2), o2-u2, ddelta_p(o2, u2)), markersize='10', fmt='x', mew=1.1, label='Nur Rohr')
 plt.errorbar(u3, L(S, u3, o3-u3), xerr=dp(u3), yerr=dL(S, dS, u3, dp(u3), o3-u3, ddelta_p(o3, u3)), markersize='10', fmt='x', mew=1.1, label='Nur Blende')
 plt.errorbar(u4, L(S, u4, o4-u4), xerr=dp(u4), yerr=dL(S, dS, u4, dp(u4), o4-u4, ddelta_p(o4, u4)), markersize='10', fmt='x', mew=1.1, label='Rohr und Blende')
-
+# Berechnung:
 plt.errorbar(u2, ((L(S, u2, o2-u2))**(-1) + (L(S, u3, o3-u3))**(-1))**(-1), markersize='10', fmt='x', mew=1.1, label='Rohr und Blende Rechnung')
 
 
 plt.title('Diagramm 8: Leitwerte mit Rohr und Blende')
 plt.legend(title='Messwerte', borderpad=1, borderaxespad=1, loc='best', shadow='true', fontsize=12)
-
 plt.xscale('log')
 plt.yscale('log')
 #plt.xlim(7e-6, 2)
 plt.xlabel(r'Druck unteres Rohrende $p_u\ [bar]$')
 plt.ylabel(r'Leitwert $L = \frac{S \cdot p_u}{\Delta{p}}$')
-plt.savefig('Diagramm08.pdf')
+#plt.savefig('Diagramm08.pdf')
 plt.show()
 
 
@@ -90,3 +104,4 @@ plt.xlabel(r'Druckdifferenz $p_o-p_u\ [bar]$')
 plt.ylabel(r'Leitwert $L = \frac{S \cdot p_u}{\Delta{p}}$')
 plt.savefig('Diagramm09.pdf')
 plt.show()
+
