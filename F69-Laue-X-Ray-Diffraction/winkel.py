@@ -7,6 +7,8 @@ c = 5.40520e-10
 
 lamb = 0.39e-10
 k = 2*np.pi/lamb
+# k = 16.11073 1/Angström
+q = 6.883e10 #1/Angström
 
 # hkl's der Ebenen: 
 hkls = [[2, -1, 0], [1, -1, 0], [2, -2, 1], [1, -2, 0], [2, -2, 1]]
@@ -14,6 +16,7 @@ hkls = [[2, -1, 0], [1, -1, 0], [2, -2, 1], [1, -2, 0], [2, -2, 1]]
 print('k:', k*1e-10, '1/A')
 print('2pi/a', 2*np.pi/a*1e-10, '1/A')
 print('Radius Ewald Sphäre:', k/(2*np.pi/a))
+print('Praktisch Ewald Radius:', q/(2*np.pi/a))
 
 
 
