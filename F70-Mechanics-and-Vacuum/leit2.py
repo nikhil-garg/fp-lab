@@ -25,9 +25,13 @@ def fitfunktion(x,a,b):
     #return a + b*x  
     return a * np.power(x, b)
 
-S = np.array([8.52878465e-07, 5.97014925e-06, 1.64609053e-05, 5.50458716e-05, 1.73010381e-04, 5.10204082e-04, 1.26742712e-03, 2.42718447e-03, 2.60416667e-03, 5.31914894e-03, 8.77192982e-03])
-dS = np.array([8.59829473e-08, 4.00707811e-07, 1.09627588e-06, 3.54230302e-06, 1.86945166e-05, 2.99116669e-05, 5.76746798e-05, 9.34316435e-05, 1.06806679e-04, 5.72769256e-04, 2.31879585e-03])
+#S = np.array([8.52878465e-07, 5.97014925e-06, 1.64609053e-05, 5.50458716e-05, 1.73010381e-04, 5.10204082e-04, 1.26742712e-03, 2.42718447e-03, 2.60416667e-03, 5.31914894e-03, 8.77192982e-03])
+#dS = np.array([8.59829473e-08, 4.00707811e-07, 1.09627588e-06, 3.54230302e-06, 1.86945166e-05, 2.99116669e-05, 5.76746798e-05, 9.34316435e-05, 1.06806679e-04, 5.72769256e-04, 2.31879585e-03])
 
+
+# Saugleistung aus Diagramm 04 in bar * liter/sekunde
+S = np.array([86.41791045,  183.31071913,  166.79012346,   174.29759174, 175.30276817,   161.55133929,  128.42205323,   72.33366648, 23.98792614, 16.33220503, 8.88815789])
+dS = np.array([ 12.11077371,  13.32287762, 19.77734776,   12.30589208, 25.47176612,  10.59239042,  13.92482812,   3.45831415, 2.36109378, 1.8030829, 2.47916957])
 
 u2, o2 = np.loadtxt('tab2.txt', unpack=True, skiprows=1)
 u3, o3 = np.loadtxt('tab3.txt', unpack=True, skiprows=1)
@@ -69,11 +73,12 @@ plt.errorbar(x4, y4, xerr=dx4, yerr=dy4, markersize='10', fmt='x', mew=1.1, labe
 r = 0.00575 # Radius in m
 dr = 0.00010
 eta = 17.1e-11 # Viskosität Luft in bar*s
+
 l = 1.0 # Länge in m
 dl = 0.002
 
 def Llam(dp):
-    return np.pi * r**4 * dp * eta * l / (8*2)
+    return np.pi * r**4 * dp / (8*eta*l)
 
 R = 8.31 # Joule/(mol*Kelvin)
 T = 293 # Kelvin
@@ -83,8 +88,10 @@ u = 1.66e-27 # Gewicht von 1 u in kg
 def Lmol(dp):
     return (8/3)*(r**3/l) * np.sqrt((np.pi*R*T)/(2*M)) + 0*dp
 
-plt.plot(x2, (Lmol(x2))*x2, label='Theorie molekular')
-plt.plot(x2, (Llam(x2))*x2, label='Theorie laminar')
+#plt.plot(x2, (Lmol(x2))*x2, label='Theorie molekular')
+#plt.plot(x2, (Llam(x2))*x2, label='Theorie laminar')
+
+
 
 
 '''
@@ -136,12 +143,12 @@ dy4 = np.log10(dy4)
 #plt.plot(x, fitfunktion(x, *popt41), color='r')
 #plt.plot(x, fitfunktion(x, *popt42), color='r')
 
-plt.title('Plot 2c: Leitwerte aus Steigung')
+plt.title('Diagramm 7: Leitwerte aus Steigung')
 plt.legend(title='Messwerte', borderpad=1, borderaxespad=1, loc='best', shadow='true', fontsize=12)
 
 plt.xscale('log')
 plt.yscale('log')
 plt.xlabel(r'Druckdifferenz $\Delta p = p_{oben}-p_{unten}\ [bar]$')
-plt.ylabel(r'Saugleistung $Q = S \cdot p_{unten}$')
-plt.savefig('plot2c2.pdf')
+plt.ylabel(r'Saugleistung $Q = S \cdot p_{unten} \ [\frac{l}{s} \cdot bar]$')
+plt.savefig('Diagramm07.pdf')
 plt.show()
