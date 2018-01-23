@@ -5,5 +5,5 @@ I chose to do the following experiments:
 - [x] E01: Electronics (Elektronik Grundpraktikum)
 - [x] F09: Neuromorphic Computing (Neuromorphes Rechnen)
 - [x] F44: Zeeman Spectroscopy (Zeemanspektroskopie)
-- [ ] F70: Mechanics and Vacuum (Mechanik und Vakuum)
-- [ ] F69: Laue X-Ray Diffraction (Röntgendiffraktometrie)
+- [x] F70: Mechanics and Vacuum (Mechanik und Vakuum)
+- [x] F69: Laue X-Ray Diffraction (Röntgendiffraktometrie)
