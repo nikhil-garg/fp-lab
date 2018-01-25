@@ -22,6 +22,7 @@ print('Praktisch Ewald Radius:', q/(2*np.pi/a))
 
 quit()
 
+# Winkel zwischen Trigonalen Ebenen berechnen: 
 for i in range(5):
     for j in range(5):
         if False: #i==j: 
