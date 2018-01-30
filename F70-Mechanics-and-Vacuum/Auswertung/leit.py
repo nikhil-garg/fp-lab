@@ -53,6 +53,11 @@ u4 = u4 * 0.001
 o2 = o2 * 0.001
 o3 = o3 * 0.001
 o4 = o4 * 0.001
+
+
+# Werte der verschiedenen Strömungsbereiche mitteln und ausgeben 
+# Laminarströmung, Molekurlarströmung, siehe Protokoll
+
 print()
 print('Rohr: Werte 1-3 gemittelt: ')
 print(np.mean(L(S, u2, o2-u2)[0:3]), '+-', np.mean((dL(S, dS, u2, dp(u2), o2-u2, ddelta_p(o2, u2)))[0:3]), 'std', np.std((dL(S, dS, u2, dp(u2), o2-u2, ddelta_p(o2, u2)))[0:3]))
