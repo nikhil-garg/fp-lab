@@ -54,6 +54,9 @@ dS = np.array([8.59829473e-08, 4.00707811e-07, 1.09627588e-06, 3.54230302e-06, 1
 #S = 80
 #dS = 5
 
+# u: unteres Rohrende, Rezipient
+# o: oberes Rohrende
+
 u2, o2 = np.loadtxt('tab2.txt', unpack=True, skiprows=1)
 u3, o3 = np.loadtxt('tab3.txt', unpack=True, skiprows=1)
 u4, o4 = np.loadtxt('tab4.txt', unpack=True, skiprows=1)
