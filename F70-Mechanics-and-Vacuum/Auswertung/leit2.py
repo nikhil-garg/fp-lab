@@ -33,6 +33,10 @@ def fitfunktion(x,a,b):
 S = np.array([86.41791045,  183.31071913,  166.79012346,   174.29759174, 175.30276817,   161.55133929,  128.42205323,   72.33366648, 23.98792614, 16.33220503, 8.88815789])
 dS = np.array([ 12.11077371,  13.32287762, 19.77734776,   12.30589208, 25.47176612,  10.59239042,  13.92482812,   3.45831415, 2.36109378, 1.8030829, 2.47916957])
 
+
+# u: unteres Rohrende, Rezipient
+# o: oberes Rohrende
+
 u2, o2 = np.loadtxt('tab2.txt', unpack=True, skiprows=1)
 u3, o3 = np.loadtxt('tab3.txt', unpack=True, skiprows=1)
 u4, o4 = np.loadtxt('tab4.txt', unpack=True, skiprows=1)
