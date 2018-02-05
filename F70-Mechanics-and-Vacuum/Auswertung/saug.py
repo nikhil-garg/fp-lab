@@ -8,7 +8,6 @@ Teil 2.4: Auswertung Tabelle 1, Saugvermögen der TMP
 Plot: Saugvermögen als Funktion des Logarithmus des Drucks auftragen
 '''
 
-
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -18,8 +17,7 @@ def S(V, t):
 def dS(V, dV, t, dt):
     return np.sqrt(((1/t)*dV)**2 + ((V/t**2)*dt)**2)
 
-
-
+# Einlesen der Werte
 p, dp, t, dt, V, dV = np.loadtxt('tab1.txt', unpack=True, skiprows=1)
 
 V = V * 0.001 #von MilliLiter nach Liter umrechnen
@@ -27,7 +25,6 @@ dV = dV * 0.001
 p = p *0.001
 dp = dp *0.001
 p_atmos = 1.01325 #mbar
-
 
 #print('p:', p)
 #print('dp:', dp)
@@ -90,6 +87,3 @@ plt.show()
 #plt.ylabel(r'Saugleistung $Q = S \cdot p_a$')
 ##plt.savefig('plot1c.pdf')
 #plt.show()
-
-
-
