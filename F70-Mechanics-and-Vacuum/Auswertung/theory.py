@@ -17,8 +17,8 @@ dr_r = 0.01 * u.cm
 #pbar = dp_r[3] * u.milli * u.bar * 1/2 #Druckdifferenz in Bereich der für die Bestimmung der Leitwerte verwendet wurde
 pbar = 1.0e-4 * u.milli * u.bar * 1/2
 eta = 17.1*u.micro*u.pascal*u.second #Viskosität Luft https://de.wikipedia.org/wiki/Viskosität
-l = u.meter #länge Rohr GESCHÄTZT
-dl = 0.5 * u.meter #länge Rohr GESCHÄTZT
+l = u.meter #länge Rohr geschätzt
+dl = 0.5 * u.meter #länge Rohr geschätzt
 L_r_theo = (np.pi/8) * r_r**4 * (pbar/(l*eta))
 
 print('L_r_theo:', L_r_theo)
@@ -36,7 +36,7 @@ dL_b_theo = 362 * dr_b**2 * (u.meter/u.second)
 print('dL_b_theo:', dL_b_theo)
 
 
-#Parrallel
+#Parrallelschaltung
 L_rb_1 = ( (1/L_r_theo) +  (1/L_b_theo) )**(-1)
 print('L_rb_1:', L_rb_1)
 
@@ -47,7 +47,7 @@ dL_rb_1 = ( x + y )**(1/2)
 print('dL_rb_1:', dL_rb_1)
 
 
-#Reihe
+#Reihenschaltung
 L_rb_2 = L_r_theo + L_b_theo
 print('L_rb_2:', L_rb_2)
 
