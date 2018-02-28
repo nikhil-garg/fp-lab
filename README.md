@@ -7,3 +7,4 @@ I chose to do the following experiments:
 - [x] F44: Zeeman Spectroscopy (Zeemanspektroskopie)
 - [x] F70: Mechanics and Vacuum (Mechanik und Vakuum)
 - [x] F69: Laue X-Ray Diffraction (Röntgendiffraktometrie)
+- [x] F61: Nuclear Magnetic Resonance (Kernspinresonanzspektroskopie)
