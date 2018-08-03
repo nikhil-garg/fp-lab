@@ -1,0 +1,77 @@
+#
+# Example: perform chi^2 fit using the Lorentz function
+# To run it start gnuplot program and type:  load "fitlorentz.gplt"
+#
+# Replace "parta_testdata.txt" by your data file name. The format we use here:
+#
+# You must set start values for Q, w and A properly for the fit to converge!!!
+# Set the boundaries xlow and xhigh of the frequency range you want to fit!
+# The precision is set to a very small value: 1e-30 = 10^-30,
+# because it must be much lower than the amplitude values.
+#
+# Gnuplot uses the dot to separate decimal places! If your data are stored
+# using the decimal comma format (german default), you should first convert
+# the commas to the dots using e.g. a text editor.
+#
+# The resulting plot is stored in the postscript file: fitlorentz.ps
+# It can be viewed using:  gv fitlorentz.ps
+#
+# Parameter names used by Gnuplot:
+#   WSSR = Weighted Sum of Squared Residuals = chi2
+#   WSSR/ndf = chi2 / ndf = reduced chi2
+#
+
+f(x)=A/sqrt((w**2 - x**2)**2+(gamma**2)*(x**2))
+
+set mxtics 5
+set mytics 5	
+
+# General Fitparameters
+gamma=2
+A=2.5e-6
+
+# Columns
+f1=1	# x Spalte
+f2=5	# y Spalte
+f3=6	# y-Fehler Spalte
+
+
+# spezielle Fitparameter
+w=170
+xlow=150
+xhigh=190
+FIT_LIMIT = 1e-10
+
+# Output
+set term postscript color
+set output "fitlorentz.ps"
+
+# Fit + Plots
+set title "Lorentz-Fit"
+set ylabel 'Amplitude / V'
+set xlabel 'Frequenz / Hz'
+fit [xlow:xhigh] f(x) "parta_testdata.txt" using f1:f2:f3 via gamma,A,w
+Q=w/gamma
+
+# Set labels Position "at (x-Value of x-axis, y-Value of y-axis)" have to be matched to your plots
+set label 2 "w = %g", w at graph 0.05, graph 0.95
+set label 3 "gamma = %g", gamma at graph 0.05, graph 0.90
+set label 4 "A = %g", A at graph 0.05, graph 0.85
+set label 1 "Q = %g", Q at graph 0.05, graph 0.80
+
+plot [xlow:xhigh] f(x) t 'Lorentzfit' ,"parta_testdata.txt" using f1:f2:f3 with errorbars t 'Messwerte'
+
+# Unset labels
+unset label 1
+unset label 2
+unset label 3
+unset label 4
+
+set title  'Titel: Data Spread around the Fit'
+set ylabel 'Normalised Residuals'
+set nokey
+
+# Here you have to chose the columns directly, otherwise it will lead to an error,
+# last term means errors are fixed at \Delta x = 1
+plot [xlow:xhigh] 0, 'parta_testdata.txt' using 1:(($5-f($1))/($6)):(1) with errorbars
+
