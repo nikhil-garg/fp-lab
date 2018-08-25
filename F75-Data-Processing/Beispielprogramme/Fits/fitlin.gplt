@@ -1,0 +1,40 @@
+#
+# Example: perform linear least squares fit
+# To run it start gnuplot program and type:  load "fitlin.gplt"
+#
+# Replace "partb_testdata.txt" by your data file name. The format we use here:
+#  Temperature   Error_Of_Temperature   Frequency   Error_Of_Frequency
+# Thus, we use columns 1:3 for the fit = Temperature:Frequency .
+#
+# You must set start values for slope and intercept properly!!!
+# Set the boundaries xlow and xhigh of the x range you want to fit!
+# The precision is set to a very small value: 1e-30 = 10^-30,
+# because it must be much lower than the amplitude values.
+#
+# Gnuplot uses the dot to separate decimal places! If your data are stored
+# using the decimal comma format (german default), you should first convert
+# the commas to the dots using e.g. a text editor.
+#
+# The resulting plot is stored in the postscript file: fitlin.eps
+# It can be viewed using:  gv fitlin.eps
+#
+f(x)=slope*x+intercept
+slope=-1.
+intercept=11.
+xlow=20.
+xhigh=60.
+FIT_LIMIT = 1.e-30
+set term x11 1
+set title "First guess"
+plot [xlow:xhigh] f(x),"partb_testdata.txt" using 1:3
+set term x11 2
+set pointsize 1.0
+sset title "After Fit"
+fit [xlow:xhigh] f(x) "partb_testdata.txt" using 1:3 via Q,w,A
+plot [xlow:xhigh] f(x),"partb_testdata.txt" using 1:3 with points pt 5
+set term postscript color
+set output "fitlin.eps"
+set title "Least Squares Fit"
+plot [xlow:xhigh] f(x),"partb_testdata.txt" using 1:3 with points pt 5
+set term x11
+show output
