@@ -9,3 +9,4 @@ I chose to do the following experiments:
 - [x] F69: Laue X-Ray Diffraction (Röntgendiffraktometrie)
 - [x] F61: Nuclear Magnetic Resonance (Kernspinresonanzspektroskopie)
 - [ ] F75: Data Processing (Computer und Datenverarbeitung)
+- [ ] F95: Medical Image Analysis (Medizinische Bildanalyse)
