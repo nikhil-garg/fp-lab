@@ -1,0 +1,26 @@
+>> aufgabe1_3_3_registrierung2bilder
+
+optimizer = 
+
+  registration.optimizer.RegularStepGradientDescent
+
+  Properties:
+    GradientMagnitudeTolerance: 1.000000e-04
+             MinimumStepLength: 1.000000e-05
+             MaximumStepLength: 6.250000e-02
+             MaximumIterations: 100
+              RelaxationFactor: 5.000000e-01
+
+metric = 
+
+  registration.metric.MeanSquares
+
+  This class has no properties.
+
+ans =
+
+    1.0622    0.0064         0
+    0.0169    1.0024         0
+  -35.2324   -2.5522    1.0000
+
+>> 
