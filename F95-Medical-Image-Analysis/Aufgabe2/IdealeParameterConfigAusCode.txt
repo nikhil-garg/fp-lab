@@ -1,0 +1,10 @@
+	// ideale Parameterkonfiguration
+	// x_m = T * x_r
+	TransformType::ParametersType optimalParameter;
+	optimalParameter.SetSize(6);
+	optimalParameter[0] = 0.004900056378026;
+	optimalParameter[1] = -0.020648378633891;
+	optimalParameter[2] = -0.077533129698997;
+	optimalParameter[3] = 3.237299999999982;
+	optimalParameter[4] = -33.884475000000000;
+	optimalParameter[5] = -25.243600000000010;
