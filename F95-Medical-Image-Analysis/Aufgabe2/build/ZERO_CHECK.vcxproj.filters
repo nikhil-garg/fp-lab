@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\FP\Allgemein\Corskar\Aufgabe2\build\CMakeFiles\a20df1624aa16a18da282f066bf0e5f7\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{C56A1229-B4E7-36CD-8252-4FF0BDA8CEF0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
