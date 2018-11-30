@@ -1,0 +1,14 @@
+data = importdata('01-ct-ct-param0.txt', ' ');
+scale = data(:,2);
+m1 = data(:,3);
+m2 = data(:,4);
+
+figure; 
+yyaxis left
+plot(scale, m1);
+yyaxis right
+plot(scale, m2);
+
+title('01-ct-ct-param0');
+xlabel('Skalierungsfaktor') % x-axis label
+ylabel('sine and cosine values') % y-axis label
